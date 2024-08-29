@@ -15,55 +15,84 @@
         android:layout_marginTop="130dp"
         android:src="@drawable/qrcode"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
-    
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/etData"
-        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:hint="Link ou Texto"
-        android:textColorHint="@color/grey2"
-        android:textColor="@color/white"
-        android:background="@null"
-        android:layout_marginEnd="20dp"
-        android:paddingStart="15dp"
         android:layout_marginStart="20dp"
-        app:layout_constraintTop_toBottomOf="@+id/ivQRCode"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@null"
+        android:hint="Link ou Texto"
+        android:paddingStart="15dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/grey2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivQRCode"
 
         />
+
     <View
         android:id="@+id/view1"
         android:layout_width="match_parent"
         android:layout_height="1.5dp"
-        android:background="@color/grey2"
-        android:layout_marginEnd="20dp"
         android:layout_marginStart="20dp"
-        app:layout_constraintTop_toBottomOf="@+id/etData"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="20dp"
+        android:background="@color/grey2"
         app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etData" />
 
     <Button
         android:id="@+id/enterbt"
-        app:layout_constraintTop_toBottomOf="@+id/view1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:hint="Confirmar"
         android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
         android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#3BA601"
+        android:hint="Confirmar"
         android:textColorHint="@color/white"
         android:textSize="20dp"
-        android:backgroundTint="#3BA601"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view1" />
 
+    <Button
+        android:id="@+id/shareBt"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="3dp"
+        android:backgroundTint="#0392BD"
+        android:hint="Compartilhar"
+        android:textColorHint="@color/white"
+        app:flow_horizontalAlign="start"
+        app:layout_constraintEnd_toStartOf="@+id/downloadBt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterbt"
+        app:layout_constraintWidth_percent="0.44" />
 
+    <Button
+        android:id="@+id/downloadBt"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#757575"
+        android:hint="Baixar"
+        android:textColorHint="@color/white"
+        app:flow_horizontalAlign="end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/shareBt"
+        app:layout_constraintTop_toBottomOf="@+id/enterbt"
+        app:layout_constraintWidth_percent="0.44" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
